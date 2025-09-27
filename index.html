@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ExploreMonde</title>
+    <meta name="description"
+        content="Découvrez les plus beaux pays d'Afrique : culture, traditions et merveilles naturelles. Explorez l'Égypte, le Kenya, l'Algérie, le Maroc et l'Afrique du Sud." />
+    <meta name="author" content="Voyage & Découverte" />
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>" />
+
+    <!-- SEO classique -->
+    <meta name="description" content="Voyage & Découverte - Explorez le monde !" />
+    <meta name="author" content="Ahmed WOUEMBO" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Voyage & Découverte" />
+    <meta property="og:description" content="Découvrez les plus beaux lieux du monde avec Voyage & Découverte." />
+    <meta property="og:image" content="/public/logo.png" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Voyage & Découverte" />
+    <meta name="twitter:description" content="Explorez les merveilles du monde avec Voyage & Découverte." />
+    <meta name="twitter:image" content="/public/logo.png" />
+    <meta name="twitter:site" content="@VoyageDecouverte" />
+
+
+
+    <script>
+        (function () {
+            try {
+                var theme = localStorage.getItem("theme");
+                if (theme === "system" || !theme) {
+                    var prefersDark = window.matchMedia(
+                        "(prefers-color-scheme: dark)",
+                    ).matches;
+                    theme = prefersDark ? "dark" : "light";
+                }
+                document.documentElement.classList.add(theme);
+            } catch (e) { }
+        })();
+    </script>
+    <link href="/src/index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
