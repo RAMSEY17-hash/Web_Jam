@@ -53,7 +53,3 @@ Ce projet permet de découvrir les continents, les pays et leurs destinations to
 ---
 
 
-## 👨‍💻 Auteur
-
-Projet: ***Voyage & Découverte***
-Développé par ***[WOUEMBO Ahmed]()***, étudiant à l’**IAI-Togo**...
