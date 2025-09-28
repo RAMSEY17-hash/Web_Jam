@@ -138,7 +138,7 @@ export default function Oceanie() {
             </section>
 
             {/* Section spéciale Océanie */}
-            <section className="py-16 bg-blue-50" >
+            <section className="py-16 bg-black" >
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
                         <h2 className="text-3xl font-bold mb-6">🏝️ L'Océanie Unique</h2>
