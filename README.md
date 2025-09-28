@@ -1,6 +1,6 @@
 # 🌍 Voyage & Découverte
 
-Un site web généré avec **Hercules** et personnalisé dans **React + TypeScript**.
+Un site web personnalisé dans **React + TypeScript**.
 Ce projet permet de découvrir les continents, les pays et leurs destinations touristiques, avec une interface moderne et interactive.
 
 ---
@@ -51,8 +51,6 @@ Ce projet permet de découvrir les continents, les pays et leurs destinations to
 - [Lucide Icons](https://lucide.dev/)
 
 ---
-
-
 
  🚧 État d'avancement du projet
 
