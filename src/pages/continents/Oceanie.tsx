@@ -180,6 +180,27 @@ export default function Oceanie() {
                 </div>
             </section>
 
+            {/* Call to Action - Océanie */}
+            <section className="py-16 bg-indigo-700 text-white">
+                <div className="container mx-auto px-4 text-center">
+                    <h2 className="text-3xl font-bold mb-4">Prêt pour l'aventure océanienne ?</h2>
+                    <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+                        Des plages de sable blanc aux récifs coralliens, l’Océanie vous invite à vivre des expériences uniques.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Button size="lg" variant="secondary">
+                            <Calendar className="mr-2 h-5 w-5" />
+                            Planifier mon voyage
+                        </Button>
+                        <Button size="lg" variant="secondary" className="bg-white/10 text-white hover:bg-white hover:text-indigo-700">
+                            <Camera className="mr-2 h-5 w-5" />
+                            Découvrir la galerie
+                        </Button>
+                    </div>
+                </div>
+            </section>
+
+
             {/* Footer */}
             <footer className="bg-background border-t py-8">
                 <div className="container mx-auto px-4">

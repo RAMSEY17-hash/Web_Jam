@@ -186,10 +186,10 @@ export default function Asie() {
             </section>
 
             {/* Section Diversité Asiatique */}
-            <section className="py-16 bg-gradient-to-r from-red-50 to-yellow-50" >
+            <section className="py-16 bg-gradient-to-r from-red-50 to-yellow-50">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="text-3xl font-bold mb-6" style={{ backgroundColor: "black" }}>🌸 La Diversité Asiatique</h2>
+                        <h2 className="text-3xl font-bold mb-6 text-black">🌸 La Diversité Asiatique</h2>
                         <p className="text-lg text-muted-foreground mb-8">
                             Un continent où coexistent 4,6 milliards d'habitants, des centaines de langues
                             et des millénaires d'histoire et d'innovations.
@@ -238,6 +238,7 @@ export default function Asie() {
                     </div>
                 </div>
             </section>
+
 
             {/* Call to Action */}
             <section className="py-16 bg-primary text-white">

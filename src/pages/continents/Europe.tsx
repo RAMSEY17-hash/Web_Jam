@@ -190,7 +190,7 @@ export default function Europe() {
             <section className="py-16 bg-blue-50"  style={{ backgroundColor: "gray" }}>
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="text-3xl font-bold mb-6">L'Union Européenne</h2>
+                        <h2 className="text-3xl font-bold mb-6">🗼L'Union Européenne</h2>
                         <p className="text-lg text-muted-foreground mb-8">
                             Découvrez l'unité dans la diversité : 27 pays unis par des valeurs communes
                             tout en préservant leur identité culturelle unique.

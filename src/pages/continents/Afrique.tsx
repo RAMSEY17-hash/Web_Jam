@@ -167,25 +167,77 @@ export default function Afrique() {
                 </div>
             </section>
 
-            {/* Call to Action */}
-            <section className="py-16 bg-primary text-white">
+            {/* Section Afrique */}
+            <section className="py-16 bg-yellow-50" style={{ backgroundColor: "lightyellow" }}>
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h2 className="text-3xl font-bold mb-6 text-black">🌍 L'Afrique</h2>
+                        <p className="text-lg text-muted-foreground mb-8">
+                            Découvrez la richesse et la diversité du continent africain, avec ses cultures,
+                            paysages et peuples uniques.
+                        </p>
+                        <div className="grid md:grid-cols-3 gap-6">
+                            <Card>
+                                <CardContent className="p-6 text-center">
+                                    <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <Users className="w-8 h-8 text-yellow-600" />
+                                    </div>
+                                    <h3 className="font-bold mb-2">54 Pays</h3>
+                                    <p className="text-sm text-muted-foreground">
+                                        Une mosaïque de cultures, langues et traditions
+                                    </p>
+                                </CardContent>
+                            </Card>
+
+                            <Card>
+                                <CardContent className="p-6 text-center">
+                                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <Globe className="w-8 h-8 text-green-600" />
+                                    </div>
+                                    <h3 className="font-bold mb-2">Diversité Naturelle</h3>
+                                    <p className="text-sm text-muted-foreground">
+                                        Déserts, savanes, forêts et rivières impressionnantes
+                                    </p>
+                                </CardContent>
+                            </Card>
+
+                            <Card>
+                                <CardContent className="p-6 text-center">
+                                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <Camera className="w-8 h-8 text-purple-600" />
+                                    </div>
+                                    <h3 className="font-bold mb-2">Sites Culturels</h3>
+                                    <p className="text-sm text-muted-foreground">
+                                        Temples, vestiges historiques et sites classés au patrimoine mondial
+                                    </p>
+                                </CardContent>
+                            </Card>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Call to Action - Afrique */}
+            <section className="py-16 bg-yellow-600 text-white">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-3xl font-bold mb-4">Prêt pour l'aventure africaine ?</h2>
                     <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-                        Nos experts vous accompagnent pour créer le voyage de vos rêves en Afrique.
+                        Des safaris aux pyramides, l'Afrique vous promet des paysages incroyables et des cultures fascinantes.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button size="lg" variant="secondary">
                             <Calendar className="mr-2 h-5 w-5" />
-                            Réserver maintenant
+                            Planifier mon voyage
                         </Button>
-                        <Button size="lg" variant="secondary" className="bg-white/10 text-white hover:bg-white hover:text-primary">
+                        <Button size="lg" variant="secondary" className="bg-white/10 text-white hover:bg-white hover:text-yellow-600">
                             <Camera className="mr-2 h-5 w-5" />
-                            Voir la galerie
+                            Découvrir la galerie
                         </Button>
                     </div>
                 </div>
             </section>
+
+
 
             {/* Footer */}
             <footer className="bg-background border-t py-8">

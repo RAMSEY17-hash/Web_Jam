@@ -137,6 +137,77 @@ export default function AmeriqueNord() {
                 </div>
             </section>
 
+            {/* Section Amérique du Nord */}
+            <section className="py-16 bg-blue-50" style={{ backgroundColor: "lightblue" }}>
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h2 className="text-3xl font-bold mb-6">🍁 Amérique du Nord</h2>
+                        <p className="text-lg text-muted-foreground mb-8">
+                            Explorez la diversité de l’Amérique du Nord, des paysages majestueux aux villes vibrantes et aux cultures variées.
+                        </p>
+                        <div className="grid md:grid-cols-3 gap-6">
+                            <Card>
+                                <CardContent className="p-6 text-center">
+                                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <Users className="w-8 h-8 text-blue-600" />
+                                    </div>
+                                    <h3 className="font-bold mb-2">3 Pays Principaux</h3>
+                                    <p className="text-sm text-muted-foreground">
+                                        Canada, États-Unis et Mexique avec leurs cultures uniques
+                                    </p>
+                                </CardContent>
+                            </Card>
+
+                            <Card>
+                                <CardContent className="p-6 text-center">
+                                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <Globe className="w-8 h-8 text-green-600" />
+                                    </div>
+                                    <h3 className="font-bold mb-2">Paysages Variés</h3>
+                                    <p className="text-sm text-muted-foreground">
+                                        Montagnes, forêts, déserts et plages magnifiques
+                                    </p>
+                                </CardContent>
+                            </Card>
+
+                            <Card>
+                                <CardContent className="p-6 text-center">
+                                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <Camera className="w-8 h-8 text-purple-600" />
+                                    </div>
+                                    <h3 className="font-bold mb-2">Sites et Monuments</h3>
+                                    <p className="text-sm text-muted-foreground">
+                                        Parcs nationaux, sites historiques et attractions célèbres
+                                    </p>
+                                </CardContent>
+                            </Card>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Call to Action - Amérique du Nord */}
+            <section className="py-16 bg-teal-700 text-white">
+                <div className="container mx-auto px-4 text-center">
+                    <h2 className="text-3xl font-bold mb-4">Prêt pour l'aventure nord-américaine ?</h2>
+                    <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+                        Des gratte-ciels de New York aux paysages naturels du Canada, partez explorer l’Amérique du Nord.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Button size="lg" variant="secondary">
+                            <Calendar className="mr-2 h-5 w-5" />
+                            Planifier mon voyage
+                        </Button>
+                        <Button size="lg" variant="secondary" className="bg-white/10 text-white hover:bg-white hover:text-teal-700">
+                            <Camera className="mr-2 h-5 w-5" />
+                            Découvrir la galerie
+                        </Button>
+                    </div>
+                </div>
+            </section>
+
+
+
             {/* Footer */}
             <footer className="bg-background border-t py-8">
                 <div className="container mx-auto px-4">
