@@ -53,7 +53,23 @@ Ce projet permet de découvrir les continents, les pays et leurs destinations to
 ---
 
 
-## 👨‍💻 Auteur
 
-Projet: ***Voyage & Découverte***
-Développé par ***[WOUEMBO Ahmed]()***, étudiant à l’**IAI-Togo**...
+ 🚧 État d'avancement du projet
+
+⚠️ **Le site n'est pas encore complet.**Actuellement, **seul le continent *Afrique*** est entièrement conçu avec :
+
+- Une description générale
+- Les pays et leurs informations détaillées
+- Les sites touristiques et lieux à visiter
+
+Les autres continents sont en cours de développement et ne disposent pas encore d'une présentation complète.
+
+## 🔜 Prochaines étapes
+
+- Ajouter le contenu manquant pour l'Europe, l'Asie, l'Amérique et l'Océanie
+- Améliorer la navigation et l’interface utilisateur
+- Mettre en place des fonctionnalités supplémentaires (filtres, recherches, etc.)
+
+---
+
+Merci de votre compréhension 🙏 et restez connectés pour les prochaines mises à jour !
