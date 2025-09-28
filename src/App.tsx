@@ -13,11 +13,12 @@ import Asie from "./pages/continents/Asie.tsx";
 import Oceanie from "./pages/continents/Oceanie.tsx";
 
 // Pages pays Afrique
-import Egypte from "./pages/pays/afrique/Egypte.tsx";
-import Maroc from "./pages/pays/afrique/Maroc.tsx";
-import Algerie from "./pages/pays/afrique/Algerie.tsx";
-import Kenya from "./pages/pays/afrique/Kenya.tsx";
-import AfriqueSud from "./pages/pays/afrique/AfriqueSud.tsx";
+import Egypte from "./pages/pays/Afrique/Egypte.tsx";
+import Maroc from "./pages/pays/Afrique/Maroc.tsx";
+import Algerie from "./pages/pays/Afrique/Algerie.tsx";
+import Kenya from "./pages/pays/Afrique/Kenya.tsx";
+import AfriqueSud from "./pages/pays/Afrique/AfriqueSud.tsx";
+
 
 export default function App() {
     return (
