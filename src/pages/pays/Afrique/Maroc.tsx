@@ -49,6 +49,33 @@ const villes = [
     }
 ];
 
+const solidarite = [
+    {
+        title: "Croix-Rouge Marocaine",
+        image: "https://www.chalon.fr/fileadmin/_processed_/6/e/csm_Maroc_b6af7b9a63.jpg",
+        description:
+            "Association humanitaire qui intervient dans les secours d’urgence, la santé, et l’assistance aux populations vulnérables à travers tout le Maroc.",
+    },
+    {
+        title: "Fondation Mohammed V pour la Solidarité",
+        image: "https://www.fh2mre.ma/wp-content/uploads/2021/06/Fondation_mohammed_v_pour_la_solidarite_logo.jpg",
+        description:
+            "Fondation œuvrant dans le développement social, l’éducation, l’insertion professionnelle et l’assistance humanitaire.",
+    },
+    {
+        title: "Association Marocaine des Droits de l’Homme (AMDH)",
+        image: "https://www.amdh.org.ma/bundles/Backend/assets/Contents/imageContent/d14cfebfb61c02ec2b4a8c67691eb984.jpg",
+        description:
+            "Organisation marocaine qui milite pour les droits humains, la justice sociale et la protection des plus démunis.",
+    },
+    {
+        title: "Entraide Nationale",
+        image: "https://lereporterexpress.ma/wp-content/uploads/2020/04/Entraide-Nat.jpg",
+        description:
+            "Institution publique qui appuie la protection sociale, la formation et l’intégration des personnes en situation de précarité.",
+    },
+];
+
 export default function Maroc() {
     const [selectedLocation, setSelectedLocation] = useState(monuments[0]);
 
@@ -141,22 +168,58 @@ export default function Maroc() {
                         {/* Culture & Diversité */}
                         <TabsContent value="culture" className="space-y-8">
                             <div className="grid md:grid-cols-2 gap-8">
-                                <Card>
+                                <Card className="h-full">
                                     <CardHeader>
                                         <CardTitle className="flex items-center gap-2">
-                                            <Users className="h-6 w-6 text-primary" />
-                                            Richesse Culturelle
+                                            <Users className="h-6 w-6 text-primary" /> Richesse Culturelle
                                         </CardTitle>
                                     </CardHeader>
-                                    <CardContent className="space-y-4">
+
+                                    <CardContent className="flex flex-col gap-6 h-full">
                                         <p className="text-muted-foreground">
-                                            Le Maroc est un carrefour de civilisations où se mélangent harmonieusement
-                                            les cultures arabe, berbère, africaine et andalouse dans un art de vivre unique.
+                                            Le Maroc est un pays multiculturel où se mêlent influences arabes, berbères et africaines.
+                                            Sa culture se reflète dans les vêtements traditionnels, la musique, la danse et les cérémonies festives.
                                         </p>
-                                        <div className="space-y-2">
-                                            <Badge variant="outline">Arabe & Berbère (Amazigh)</Badge>
-                                            <Badge variant="outline">Islam (99%)</Badge>
-                                            <Badge variant="outline">Cultures Chleuh, Rifaine, Sahraouie</Badge>
+
+                                        <div className="flex flex-col gap-6 flex-1">
+                                            {/* Tenues traditionnelles berbères */}
+                                            <div className="flex flex-col flex-1">
+                                                <img
+                                                    src="https://femmesdumaroc.com/wp-content/uploads/2019/06/18.jpg"
+                                                    alt="Tenue traditionnelle berbère"
+                                                    className="rounded-lg object-cover h-full w-full"
+                                                />
+                                                <p className="text-sm text-muted-foreground font-semibold mt-2">Tenues berbères</p>
+                                                <p className="text-xs text-muted-foreground">
+                                                    Robes colorées, brodées à la main, portées lors de mariages et fêtes traditionnelles.
+                                                </p>
+                                            </div>
+
+                                            {/* Tenues traditionnelles marocaines */}
+                                            <div className="flex flex-col flex-1">
+                                                <img
+                                                    src="https://hindboutik.com/wp-content/uploads/2025/05/djellaba-ivoire3.webp"
+                                                    alt="Djellaba marocaine"
+                                                    className="rounded-lg object-cover h-full w-full"
+                                                />
+                                                <p className="text-sm text-muted-foreground font-semibold mt-2">Djellaba</p>
+                                                <p className="text-xs text-muted-foreground">
+                                                    Longue robe ample portée par les hommes et les femmes, symbole de l'identité culturelle marocaine.
+                                                </p>
+                                            </div>
+
+                                            {/* Tenues de danse traditionnelle */}
+                                            <div className="flex flex-col flex-1">
+                                                <img
+                                                    src="https://imagedelivery.net/UpBbDZmjrt-WGPYbM3yOCA/26-morocco-article-932-what-you-need-to-know-about-oriental-dance-200509454465390842e28b07.18990354/w=469,h=313"
+                                                    alt="Danseuse marocaine"
+                                                    className="rounded-lg object-cover h-full w-full"
+                                                />
+                                                <p className="text-sm text-muted-foreground font-semibold mt-2">Costumes de danse traditionnelle</p>
+                                                <p className="text-xs text-muted-foreground">
+                                                    Vêtements colorés et richement décorés pour les danses populaires comme l’Ahidous et les danses du ventre.
+                                                </p>
+                                            </div>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -167,23 +230,52 @@ export default function Maroc() {
                                     </CardHeader>
                                     <CardContent>
                                         <div className="grid grid-cols-2 gap-4">
+                                            {/* Artisanat */}
                                             <div className="space-y-2">
                                                 <h4 className="font-semibold">Artisanat</h4>
-                                                <ul className="text-sm space-y-1 text-muted-foreground">
-                                                    <li>• Tapis berbères</li>
-                                                    <li>• Poterie de Salé</li>
-                                                    <li>• Maroquinerie de Fès</li>
-                                                    <li>• Bijoux en argent</li>
-                                                </ul>
+                                                {[
+                                                    {
+                                                        title: "Poterie marocaine",
+                                                        image: "https://images.unsplash.com/photo-1706794831005-e0cbae755fae?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8UG90ZXJpZSUyMG1hcm9jYWluZXxlbnwwfHwwfHx8MA%3D%3D",
+                                                    },
+                                                    {
+                                                        title: "Tapis berbères",
+                                                        image: "https://images.unsplash.com/flagged/photo-1595520356953-41f628be588c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8VGFwaXMlMjBiZXJiJUMzJUE4cmVzJTIwbWFyb2NhaW5lfGVufDB8fDB8fHww",
+                                                    },
+                                                    {
+                                                        title: "Bijoux en argent",
+                                                        image: "https://media.istockphoto.com/id/930564696/fr/photo/bijoux-en-argent-sur-une-b%C3%A2che-bleue-dans-la-rue-march%C3%A9-aux-puces.webp?a=1&b=1&s=612x612&w=0&k=20&c=6YgkaF_xhbILU26Q1j5AA2oDQ7DL7TYjmQz0v8HIajI=",
+                                                    },
+                                                ].map((item) => (
+                                                    <div key={item.title}>
+                                                        <img src={item.image} alt={item.title} className="rounded-lg mb-2 h-full w-full object-cover" />
+                                                        <p className="text-sm text-muted-foreground">{item.title}</p>
+                                                    </div>
+                                                ))}
                                             </div>
+
+                                            {/* Gastronomie */}
                                             <div className="space-y-2">
                                                 <h4 className="font-semibold">Gastronomie</h4>
-                                                <ul className="text-sm space-y-1 text-muted-foreground">
-                                                    <li>• Tagine</li>
-                                                    <li>• Couscous</li>
-                                                    <li>• Pastilla</li>
-                                                    <li>• Thé à la menthe</li>
-                                                </ul>
+                                                {[
+                                                    {
+                                                        title: "Couscous",
+                                                        image: "https://media.istockphoto.com/id/1143191120/fr/photo/tajine-marocaine-traditionnelle-de-poulet-aux-fruits-secs-et-aux-%C3%A9pices.webp?a=1&b=1&s=612x612&w=0&k=20&c=wSyBLyyfQ_UakuI_cUqwsU0ClluycbJi-Ns3gSuopuE=",
+                                                    },
+                                                    {
+                                                        title: "Tagine",
+                                                        image: "https://images.unsplash.com/photo-1682370207954-c8a9cccaabb4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8VGFnaW5lJTIwbWFyb2NhaW58ZW58MHx8MHx8fDA%3D",
+                                                    },
+                                                    {
+                                                        title: "Pastilla",
+                                                        image: "https://media.istockphoto.com/id/946267390/fr/photo/pastilla-marocaine-bsteeya.webp?a=1&b=1&s=612x612&w=0&k=20&c=R17PTqaZVPrSrZlvjou0rrdQvXW8-0grrdwDAJ1C64E=",
+                                                    },
+                                                ].map((item) => (
+                                                    <div key={item.title}>
+                                                        <img src={item.image} alt={item.title} className="rounded-lg mb-2 h-full w-full object-cover" />
+                                                        <p className="text-sm text-muted-foreground">{item.title}</p>
+                                                    </div>
+                                                ))}
                                             </div>
                                         </div>
                                     </CardContent>
@@ -191,61 +283,25 @@ export default function Maroc() {
                             </div>
                         </TabsContent>
 
+
                         {/* Solidarité & Entraide */}
                         <TabsContent value="solidarite" className="space-y-8">
                             <div className="grid md:grid-cols-2 gap-8">
-                                <Card>
-                                    <CardHeader>
-                                        <CardTitle className="flex items-center gap-2">
-                                            <Heart className="h-6 w-6 text-red-500" />
-                                            Projets Humanitaires
-                                        </CardTitle>
-                                    </CardHeader>
-                                    <CardContent className="space-y-4">
-                                        <div className="space-y-3">
-                                            <div className="p-3 bg-blue-50 rounded-lg">
-                                                <h4 className="font-semibold text-blue-900">💧 Eau dans l'Atlas</h4>
-                                                <p className="text-sm text-blue-700">Adduction d'eau potable dans les villages berbères</p>
-                                            </div>
-                                            <div className="p-3 bg-green-50 rounded-lg">
-                                                <h4 className="font-semibold text-green-900">📚 Alphabétisation des femmes</h4>
-                                                <p className="text-sm text-green-700">Centres d'apprentissage dans les zones rurales</p>
-                                            </div>
-                                            <div className="p-3 bg-yellow-50 rounded-lg">
-                                                <h4 className="font-semibold text-yellow-900">🌱 Coopératives d'argan</h4>
-                                                <p className="text-sm text-yellow-700">Soutien aux femmes productrices d'huile d'argan</p>
-                                            </div>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-
-                                <Card>
-                                    <CardHeader>
-                                        <CardTitle>Échanges Culturels</CardTitle>
-                                    </CardHeader>
-                                    <CardContent className="space-y-4">
-                                        <p className="text-muted-foreground">
-                                            Participez aux échanges culturels avec les communautés locales :
-                                        </p>
-                                        <ul className="space-y-2">
-                                            <li className="flex items-start gap-2">
-                                                <Users className="h-4 w-4 mt-1 text-primary" />
-                                                <span className="text-sm">Familles d'accueil berbères</span>
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <Heart className="h-4 w-4 mt-1 text-red-500" />
-                                                <span className="text-sm">Ateliers de cuisine traditionnelle</span>
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <Globe className="h-4 w-4 mt-1 text-blue-500" />
-                                                <span className="text-sm">Apprentissage de l'arabe darija</span>
-                                            </li>
-                                        </ul>
-                                        <Button className="w-full mt-4">
-                                            Rejoindre un projet
-                                        </Button>
-                                    </CardContent>
-                                </Card>
+                                {solidarite.map((item) => (
+                                    <Card key={item.title}>
+                                        <CardHeader>
+                                            <CardTitle>{item.title}</CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <img
+                                                src={item.image}
+                                                alt={item.title}
+                                                className="rounded-lg mb-2"
+                                            />
+                                            <p className="text-sm text-muted-foreground">{item.description}</p>
+                                        </CardContent>
+                                    </Card>
+                                ))}
                             </div>
                         </TabsContent>
 
@@ -327,7 +383,7 @@ export default function Maroc() {
                                                 <img
                                                     src={monument.image}
                                                     alt={monument.name}
-                                                    className="w-full h-40 object-cover rounded-t-lg"
+                                                    className="w-full h-full object-cover rounded-t-lg"
                                                 />
                                                 <CardContent className="p-4">
                                                     <h5 className="font-semibold mb-2">{monument.name}</h5>

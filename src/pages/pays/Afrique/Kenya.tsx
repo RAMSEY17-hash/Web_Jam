@@ -49,6 +49,34 @@ const villes = [
     }
 ];
 
+const solidarite = [
+    {
+        title: "Croix-Rouge du Kenya",
+        image: "https://www.i-resilience.com/wp-content/uploads/2014/07/IMG_20140213_140922.jpg",
+        description:
+            "Organisation humanitaire de premier plan au Kenya, active dans les secours d’urgence, la santé et les programmes de résilience communautaire.",
+    },
+    {
+        title: "Shining Hope for Communities (SHOFCO)",
+        image: "https://assets.citizen.digital/150696/conversions/IMG-20250425-WA0272%282%29-og_image.webp",
+        description:
+            "ONG kényane offrant des services d’éducation, de santé et de développement économique dans les bidonvilles de Nairobi et d’autres régions.",
+    },
+    {
+        title: "Amref Health Africa",
+        image: "https://pbs.twimg.com/media/Gbie73tXQAAdb8w.jpg:large",
+        description:
+            "Organisation de santé africaine née au Kenya, œuvrant dans l’accès aux soins, la formation médicale et la santé communautaire.",
+    },
+    {
+        title: "Kenya Community Development Foundation (KCDF)",
+        image: "https://media.licdn.com/dms/image/v2/D4E22AQF3B53zThT52g/feedshare-shrink_800/B4EZO_3mAMHkAo-/0/1734090843780?e=2147483647&v=beta&t=ekj60khsDKtSx8rWGjHEmS1MVK9o230MDt9kSYw5GfY",
+        description:
+            "Fondation qui soutient le développement communautaire durable, l’éducation et la réduction de la pauvreté au Kenya.",
+    },
+];
+
+
 export default function Kenya() {
     const [selectedLocation, setSelectedLocation] = useState(monuments[0]);
 
@@ -141,22 +169,59 @@ export default function Kenya() {
                         {/* Culture & Diversité */}
                         <TabsContent value="culture" className="space-y-8">
                             <div className="grid md:grid-cols-2 gap-8">
-                                <Card>
+                                <Card className="h-full">
                                     <CardHeader>
                                         <CardTitle className="flex items-center gap-2">
-                                            <Users className="h-6 w-6 text-primary" />
-                                            Richesse Culturelle
+                                            <Users className="h-6 w-6 text-primary" /> Richesse Culturelle
                                         </CardTitle>
                                     </CardHeader>
-                                    <CardContent className="space-y-4">
+
+                                    <CardContent className="flex flex-col gap-6 h-full">
                                         <p className="text-muted-foreground">
-                                            Le Kenya abrite plus de 40 groupes ethniques différents, chacun avec sa langue,
-                                            ses traditions et sa culture unique. Berceau de l'humanité et terre de diversité.
+                                            Le Kenya est un pays multiculturel où cohabitent plus de 40 groupes ethniques.
+                                            Sa richesse culturelle se reflète dans les vêtements traditionnels, les danses,
+                                            la musique et les cérémonies rituelles.
                                         </p>
-                                        <div className="space-y-2">
-                                            <Badge variant="outline">Swahili & Anglais</Badge>
-                                            <Badge variant="outline">Christianisme (80%)</Badge>
-                                            <Badge variant="outline">Islam & Religions traditionnelles</Badge>
+
+                                        <div className="flex flex-col gap-6 flex-1">
+                                            {/* Exemple de tenues Maasai */}
+                                            <div className="flex flex-col flex-1">
+                                                <img
+                                                    src="https://thumbs.dreamstime.com/z/masai-en-tenue-traditionnelle-color%C3%A9e-montrant-maasai-saut-danser-%C3%A0-la-tribu-locale-village-pr%C3%A8s-de-c%C3%A9l%C3%A8bre-destination-289849635.jpg"
+                                                    alt="Tenue traditionnelle Maasai"
+                                                    className="rounded-lg object-cover h-full w-full"
+                                                />
+                                                <p className="text-sm text-muted-foreground font-semibold mt-2">Tenues Maasai</p>
+                                                <p className="text-xs text-muted-foreground">
+                                                    Vêtements rouges distinctifs, perles colorées et bijoux élaborés portés lors des cérémonies traditionnelles.
+                                                </p>
+                                            </div>
+
+                                            {/* Exemple de tenues Kikuyu */}
+                                            <div className="flex flex-col flex-1">
+                                                <img
+                                                    src="https://c8.alamy.com/compfr/cn1b4r/les-kikuyu-gikuyu-danse-et-battre-le-tambour-aberdare-kenya-cn1b4r.jpg"
+                                                    alt="Tenue traditionnelle Kikuyu"
+                                                    className="rounded-lg object-cover h-full w-full"
+                                                />
+                                                <p className="text-sm text-muted-foreground font-semibold mt-2">Tenues Kikuyu</p>
+                                                <p className="text-xs text-muted-foreground">
+                                                    Robes colorées et coiffures traditionnelles, souvent accompagnées de colliers et bracelets en perles.
+                                                </p>
+                                            </div>
+
+                                            {/* Exemple de tenues Samburu */}
+                                            <div className="flex flex-col flex-1">
+                                                <img
+                                                    src="https://thumbs.dreamstime.com/b/femmes-traditionnelles-de-samburu-au-kenya-95731917.jpg"
+                                                    alt="Tenue traditionnelle Samburu"
+                                                    className="rounded-lg object-cover h-full w-full"
+                                                />
+                                                <p className="text-sm text-muted-foreground font-semibold mt-2">Tenues Samburu</p>
+                                                <p className="text-xs text-muted-foreground">
+                                                    Vêtements et ornements en perles, souvent rouges et bleus, caractéristiques du peuple Samburu.
+                                                </p>
+                                            </div>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -167,87 +232,91 @@ export default function Kenya() {
                                     </CardHeader>
                                     <CardContent>
                                         <div className="grid grid-cols-2 gap-4">
+                                            {/* Artisanat */}
                                             <div className="space-y-2">
                                                 <h4 className="font-semibold">Artisanat</h4>
-                                                <ul className="text-sm space-y-1 text-muted-foreground">
-                                                    <li>• Sculptures sur bois Makonde</li>
-                                                    <li>• Bijoux perles Masaï</li>
-                                                    <li>• Textiles Kanga et Kitenge</li>
-                                                    <li>• Paniers Kiondo</li>
-                                                </ul>
+                                                {[
+                                                    {
+                                                        title: "Perles Maasai",
+                                                        image: "https://i.pinimg.com/736x/95/be/94/95be94b6dde4cb60231f3590281b2dcb.jpg",
+                                                    },
+                                                    {
+                                                        title: "Sculptures en bois",
+                                                        image: "https://c8.alamy.com/compfr/b57mr5/les-sculptures-sur-bois-sont-en-vente-dans-un-magasin-au-kenya-s-historique-ville-portuaire-de-mombasa-b57mr5.jpg",
+                                                    },
+                                                    {
+                                                        title: "Tissus kitenge",
+                                                        image: "https://d17a17kld06uk8.cloudfront.net/products/IUPWSH4/9ST4RIXR-default.jpg",
+                                                    },
+                                                ].map((item) => (
+                                                    <div key={item.title}>
+                                                        <img
+                                                            src={item.image}
+                                                            alt={item.title}
+                                                            className="rounded-lg mb-2 h-full w-full object-cover"
+                                                        />
+                                                        <p className="text-sm text-muted-foreground">{item.title}</p>
+                                                    </div>
+                                                ))}
                                             </div>
+
+                                            {/* Gastronomie */}
                                             <div className="space-y-2">
                                                 <h4 className="font-semibold">Gastronomie</h4>
-                                                <ul className="text-sm space-y-1 text-muted-foreground">
-                                                    <li>• Ugali</li>
-                                                    <li>• Nyama choma</li>
-                                                    <li>• Pilau</li>
-                                                    <li>• Thé chai</li>
-                                                </ul>
+                                                {[
+                                                    {
+                                                        title: "Ugali",
+                                                        image: "https://www.voyagekenya.fr/cdn/ke-public/ugali.jpg",
+                                                    },
+                                                    {
+                                                        title: "Nyama Choma",
+                                                        image: "https://lowcarbafrica.com/wp-content/uploads/2022/10/Nyama-Choma-IG-1.jpg",
+                                                    },
+                                                    {
+                                                        title: "Sukuma Wiki",
+                                                        image: "https://kitchengatherings.com/wp-content/uploads/sukumawiki-kale-main.jpg",
+                                                    },
+                                                ].map((item) => (
+                                                    <div key={item.title}>
+                                                        <img
+                                                            src={item.image}
+                                                            alt={item.title}
+                                                            className="rounded-lg mb-2 h-full w-full object-cover"
+                                                        />
+                                                        <p className="text-sm text-muted-foreground">{item.title}</p>
+                                                    </div>
+                                                ))}
                                             </div>
                                         </div>
                                     </CardContent>
                                 </Card>
+
                             </div>
                         </TabsContent>
+
 
                         {/* Solidarité & Entraide */}
                         <TabsContent value="solidarite" className="space-y-8">
                             <div className="grid md:grid-cols-2 gap-8">
-                                <Card>
-                                    <CardHeader>
-                                        <CardTitle className="flex items-center gap-2">
-                                            <Heart className="h-6 w-6 text-red-500" />
-                                            Projets Humanitaires
-                                        </CardTitle>
-                                    </CardHeader>
-                                    <CardContent className="space-y-4">
-                                        <div className="space-y-3">
-                                            <div className="p-3 bg-green-50 rounded-lg">
-                                                <h4 className="font-semibold text-green-900">🌱 Conservation de la faune</h4>
-                                                <p className="text-sm text-green-700">Protection des éléphants et rhinocéros contre le braconnage</p>
-                                            </div>
-                                            <div className="p-3 bg-blue-50 rounded-lg">
-                                                <h4 className="font-semibold text-blue-900">📚 Éducation des enfants Masaï</h4>
-                                                <p className="text-sm text-blue-700">Écoles mobiles dans les communautés nomades</p>
-                                            </div>
-                                            <div className="p-3 bg-yellow-50 rounded-lg">
-                                                <h4 className="font-semibold text-yellow-900">💧 Eau potable dans les bidonvilles</h4>
-                                                <p className="text-sm text-yellow-700">Systèmes d'eau dans les quartiers informels de Nairobi</p>
-                                            </div>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-
-                                <Card>
-                                    <CardHeader>
-                                        <CardTitle>Échanges Culturels</CardTitle>
-                                    </CardHeader>
-                                    <CardContent className="space-y-4">
-                                        <p className="text-muted-foreground">
-                                            Participez aux échanges culturels avec les communautés locales :
-                                        </p>
-                                        <ul className="space-y-2">
-                                            <li className="flex items-start gap-2">
-                                                <Users className="h-4 w-4 mt-1 text-primary" />
-                                                <span className="text-sm">Immersion dans les villages Masaï</span>
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <Heart className="h-4 w-4 mt-1 text-red-500" />
-                                                <span className="text-sm">Ateliers d'artisanat traditionnel</span>
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <Globe className="h-4 w-4 mt-1 text-blue-500" />
-                                                <span className="text-sm">Apprentissage du swahili</span>
-                                            </li>
-                                        </ul>
-                                        <Button className="w-full mt-4">
-                                            Rejoindre un projet
-                                        </Button>
-                                    </CardContent>
-                                </Card>
+                                {solidarite.map((item) => (
+                                    <Card key={item.title}>
+                                        <CardHeader>
+                                            <CardTitle>{item.title}</CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <img
+                                                src={item.image}
+                                                alt={item.title}
+                                                className="rounded-lg mb-2 h-full w-full object-cover"
+                                            />
+                                            <p className="text-sm text-muted-foreground">{item.description}</p>
+                                        </CardContent>
+                                    </Card>
+                                ))}
                             </div>
                         </TabsContent>
+
+
 
                         {/* Exploration */}
                         <TabsContent value="exploration" className="space-y-8">
@@ -327,7 +396,7 @@ export default function Kenya() {
                                                 <img
                                                     src={monument.image}
                                                     alt={monument.name}
-                                                    className="w-full h-40 object-cover rounded-t-lg"
+                                                    className="w-full h-full object-cover rounded-t-lg"
                                                 />
                                                 <CardContent className="p-4">
                                                     <h5 className="font-semibold mb-2">{monument.name}</h5>

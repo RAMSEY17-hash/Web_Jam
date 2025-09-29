@@ -49,6 +49,34 @@ const villes = [
     }
 ];
 
+const solidarite = [
+    {
+        title: "Croix-Rouge Égyptienne",
+        image: "https://www.icrc.org/sites/default/files/styles/desktop_full/public/2024-02/jpeg-optimizer_V-P-LY-E-00391.JPG.webp?itok=GoeipgMp",
+        description:
+            "Organisation humanitaire active en Égypte, apportant une aide d’urgence, des soins de santé et un soutien aux populations vulnérables.",
+    },
+    {
+        title: "Banque Alimentaire Égyptienne",
+        image: "https://www.fondation-bel.org/wp-content/uploads/2021/09/efb-logo-en-n-scaled.jpg",
+        description:
+            "Programme qui lutte contre la faim et le gaspillage alimentaire en redistribuant des repas aux familles défavorisées.",
+    },
+    {
+        title: "Resala Charity Organization",
+        image: "https://assets.cairo360.com/app/uploads/2025/09/03/Misr-El-Kheir-scaled.jpeg",
+        description:
+            "Association caritative égyptienne offrant du soutien éducatif, médical et social à des millions de bénéficiaires.",
+    },
+    {
+        title: "Misr El Kheir Foundation",
+        image: "https://www.lg.com/content/dam/channel/wcms/eg_en/images/lg-story/lgxmisr_el_kheir_complete_the_second_phase_of_the_education_file_in_assiut/LGxMisr-El-Khair-complete-the-second-phase-of-the-education-file-in-Assiut.-PicM.jpg",
+        description:
+            "Fondation qui œuvre dans l’éducation, la santé, la recherche scientifique et le développement communautaire en Égypte.",
+    },
+];
+
+
 export default function Egypte() {
     const [selectedLocation, setSelectedLocation] = useState(monuments[0]);
 
@@ -141,22 +169,59 @@ export default function Egypte() {
                         {/* Culture & Diversité */}
                         <TabsContent value="culture" className="space-y-8">
                             <div className="grid md:grid-cols-2 gap-8">
-                                <Card>
+                                <Card className="h-full">
                                     <CardHeader>
                                         <CardTitle className="flex items-center gap-2">
-                                            <Users className="h-6 w-6 text-primary" />
-                                            Richesse Culturelle
+                                            <Users className="h-6 w-6 text-primary" /> Richesse Culturelle
                                         </CardTitle>
                                     </CardHeader>
-                                    <CardContent className="space-y-4">
+
+                                    <CardContent className="flex flex-col gap-6 h-full">
                                         <p className="text-muted-foreground">
-                                            L'Égypte est le berceau d'une civilisation millénaire qui fascine le monde entier.
-                                            Des hiéroglyphes aux pyramides, chaque pierre raconte une histoire.
+                                            L’Égypte est un carrefour historique où se mêlent héritage pharaonique,
+                                            influences coptes et culture islamique. Sa richesse culturelle se reflète
+                                            dans les vêtements, la musique, la danse et les cérémonies traditionnelles.
                                         </p>
-                                        <div className="space-y-2">
-                                            <Badge variant="outline">Langue Arabe</Badge>
-                                            <Badge variant="outline">Islam (90%)</Badge>
-                                            <Badge variant="outline">Christianisme Copte (10%)</Badge>
+
+                                        <div className="flex flex-col gap-6 flex-1">
+                                            {/* Tenues traditionnelles égyptiennes */}
+                                            <div className="flex flex-col flex-1">
+                                                <img
+                                                    src="https://i.pinimg.com/736x/3d/85/35/3d8535679521797e3bb47033f99b90fb.jpg"
+                                                    alt="Galabeya égyptienne"
+                                                    className="rounded-lg object-cover h-full w-full"
+                                                />
+                                                <p className="text-sm text-muted-foreground font-semibold mt-2">Galabeya</p>
+                                                <p className="text-xs text-muted-foreground">
+                                                    Robe ample portée par les hommes et les femmes, souvent lors des fêtes et cérémonies.
+                                                </p>
+                                            </div>
+
+                                            {/* Costumes de danse orientale */}
+                                            <div className="flex flex-col flex-1">
+                                                <img
+                                                    src="https://plus.unsplash.com/premium_photo-1718737640367-e7f99db9bda4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                                    alt="Costume de danse orientale égyptienne"
+                                                    className="rounded-lg object-cover h-full w-full"
+                                                />
+                                                <p className="text-sm text-muted-foreground font-semibold mt-2">Costumes de danse orientale</p>
+                                                <p className="text-xs text-muted-foreground">
+                                                    Brillants et richement décorés, ils accompagnent la danse du ventre, emblématique de l’Égypte.
+                                                </p>
+                                            </div>
+
+                                            {/* Tenues traditionnelles coptes */}
+                                            <div className="flex flex-col flex-1">
+                                                <img
+                                                    src="https://i.la-croix.com/836x/smart/2023/05/05/1201266204/Messe-Paques-leglise-Samaan-Kharaz-Caire-Egypte-2014_0.jpg"
+                                                    alt="Tenue traditionnelle copte"
+                                                    className="rounded-lg object-cover h-full w-full"
+                                                />
+                                                <p className="text-sm text-muted-foreground font-semibold mt-2">Tenues coptes</p>
+                                                <p className="text-xs text-muted-foreground">
+                                                    Vêtements traditionnels colorés portés lors des cérémonies religieuses coptes.
+                                                </p>
+                                            </div>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -167,85 +232,87 @@ export default function Egypte() {
                                     </CardHeader>
                                     <CardContent>
                                         <div className="grid grid-cols-2 gap-4">
+                                            {/* Artisanat */}
                                             <div className="space-y-2">
                                                 <h4 className="font-semibold">Artisanat</h4>
-                                                <ul className="text-sm space-y-1 text-muted-foreground">
-                                                    <li>• Papyrus traditionnel</li>
-                                                    <li>• Bijoux en or et argent</li>
-                                                    <li>• Tapis tissés à la main</li>
-                                                    <li>• Poterie de Fustat</li>
-                                                </ul>
+                                                {[
+                                                    {
+                                                        title: "Papyrus peint",
+                                                        image: "https://images.unsplash.com/photo-1722684526676-aee4b65b0af7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fFBhcHlydXMlMjBwZWludGVneXB0ZXxlbnwwfHwwfHx8MA%3D%3D",
+                                                    },
+                                                    {
+                                                        title: "Bijoux égyptiens",
+                                                        image: "https://media.istockphoto.com/id/691272130/fr/photo/collection-souvenirs-dorient.webp?a=1&b=1&s=612x612&w=0&k=20&c=-yrKjtNckUN3997Ky1TcwXG9tqq8tap3CfqBHA9PIiY=",
+                                                    },
+                                                    {
+                                                        title: "Sculptures en pierre",
+                                                        image: "https://plus.unsplash.com/premium_photo-1661906977668-ece2c96385c4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8U2N1bHB0dXJlcyUyMGVuJTIwcGllcnJlJTIwZWd5cHRlfGVufDB8fDB8fHww",
+                                                    },
+                                                ].map((item) => (
+                                                    <div key={item.title}>
+                                                        <img
+                                                            src={item.image}
+                                                            alt={item.title}
+                                                            className="rounded-lg mb-2 h-48 w-full object-cover"
+                                                        />
+                                                        <p className="text-sm text-muted-foreground">{item.title}</p>
+                                                    </div>
+                                                ))}
                                             </div>
+
+                                            {/* Gastronomie */}
                                             <div className="space-y-2">
                                                 <h4 className="font-semibold">Gastronomie</h4>
-                                                <ul className="text-sm space-y-1 text-muted-foreground">
-                                                    <li>• Ful medames</li>
-                                                    <li>• Koshari</li>
-                                                    <li>• Molokheya</li>
-                                                    <li>• Thé à la menthe</li>
-                                                </ul>
+                                                {[
+                                                    {
+                                                        title: "Koshari",
+                                                        image: "https://media.istockphoto.com/id/1491179618/fr/photo/plat-traditionnel-%C3%A9gyptien-kushary-ou-koushari.webp?a=1&b=1&s=612x612&w=0&k=20&c=yF1gfIgcwnxxv_jAyWH1xtzWi2JzOk3HfjqvULQwBcE=",
+                                                    },
+                                                    {
+                                                        title: "Ful Medames",
+                                                        image: "https://media.istockphoto.com/id/2228010311/fr/photo/vue-de-dessus-pour-les-f%C3%A8ves-%C3%A0-la-sauce-tahini.webp?a=1&b=1&s=612x612&w=0&k=20&c=0RS_pZEJILCp4dzykKOl-jQ6COD00fZTv5xh---gVCk=",
+                                                    },
+                                                    {
+                                                        title: "Baklava égyptienne",
+                                                        image: "https://media.istockphoto.com/id/1490913497/fr/photo/desserts-arabes.webp?a=1&b=1&s=612x612&w=0&k=20&c=enWiulGE26GJhNkT5T-oeqtmbSC59NcdazQpfd21pPA=",
+                                                    },
+                                                ].map((item) => (
+                                                    <div key={item.title}>
+                                                        <img
+                                                            src={item.image}
+                                                            alt={item.title}
+                                                            className="rounded-lg mb-2 h-full w-full object-cover"
+                                                        />
+                                                        <p className="text-sm text-muted-foreground">{item.title}</p>
+                                                    </div>
+                                                ))}
                                             </div>
                                         </div>
                                     </CardContent>
                                 </Card>
+
                             </div>
                         </TabsContent>
+
 
                         {/* Solidarité & Entraide */}
                         <TabsContent value="solidarite" className="space-y-8">
                             <div className="grid md:grid-cols-2 gap-8">
-                                <Card>
-                                    <CardHeader>
-                                        <CardTitle className="flex items-center gap-2">
-                                            <Heart className="h-6 w-6 text-red-500" />
-                                            Projets Humanitaires
-                                        </CardTitle>
-                                    </CardHeader>
-                                    <CardContent className="space-y-4">
-                                        <div className="space-y-3">
-                                            <div className="p-3 bg-blue-50 rounded-lg">
-                                                <h4 className="font-semibold text-blue-900">💧 Accès à l'eau potable</h4>
-                                                <p className="text-sm text-blue-700">Projets de forage dans les villages ruraux du sud de l'Égypte</p>
-                                            </div>
-                                            <div className="p-3 bg-green-50 rounded-lg">
-                                                <h4 className="font-semibold text-green-900">📚 Éducation pour tous</h4>
-                                                <p className="text-sm text-green-700">Centres d'alphabétisation dans les zones reculées</p>
-                                            </div>
-                                            <div className="p-3 bg-yellow-50 rounded-lg">
-                                                <h4 className="font-semibold text-yellow-900">🏥 Santé communautaire</h4>
-                                                <p className="text-sm text-yellow-700">Cliniques mobiles dans le désert</p>
-                                            </div>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-
-                                <Card>
-                                    <CardHeader>
-                                        <CardTitle>Échanges Culturels</CardTitle>
-                                    </CardHeader>
-                                    <CardContent className="space-y-4">
-                                        <p className="text-muted-foreground">
-                                            Participez aux échanges culturels avec les communautés locales :
-                                        </p>
-                                        <ul className="space-y-2">
-                                            <li className="flex items-start gap-2">
-                                                <Users className="h-4 w-4 mt-1 text-primary" />
-                                                <span className="text-sm">Familles d'accueil à Assouan</span>
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <Heart className="h-4 w-4 mt-1 text-red-500" />
-                                                <span className="text-sm">Ateliers d'artisanat avec les femmes locales</span>
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <Globe className="h-4 w-4 mt-1 text-blue-500" />
-                                                <span className="text-sm">Échange linguistique arabe-français</span>
-                                            </li>
-                                        </ul>
-                                        <Button className="w-full mt-4">
-                                            Rejoindre un projet
-                                        </Button>
-                                    </CardContent>
-                                </Card>
+                                {solidarite.map((item) => (
+                                    <Card key={item.title}>
+                                        <CardHeader>
+                                            <CardTitle>{item.title}</CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <img
+                                                src={item.image}
+                                                alt={item.title}
+                                                className="rounded-lg mb-2"
+                                            />
+                                            <p className="text-sm text-muted-foreground">{item.description}</p>
+                                        </CardContent>
+                                    </Card>
+                                ))}
                             </div>
                         </TabsContent>
 
@@ -327,7 +394,7 @@ export default function Egypte() {
                                                 <img
                                                     src={monument.image}
                                                     alt={monument.name}
-                                                    className="w-full h-40 object-cover rounded-t-lg"
+                                                    className="w-full h-full object-cover rounded-t-lg"
                                                 />
                                                 <CardContent className="p-4">
                                                     <h5 className="font-semibold mb-2">{monument.name}</h5>
